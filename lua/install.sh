@@ -1,4 +1,5 @@
 #!/bin/sh
+#chmod u+x
 if [ ! -r /proc/cpuinfo ]; then
   echo "Is this Linux? Cannot find or read /proc/cpuinfo"
   exit 1
