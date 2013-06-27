@@ -1,10 +1,8 @@
 # c++
----
 
-```g++ helloworld.cc```
-
-```./a.out```
-
-```g++ helloworld.cc -o helloworld```
-
-```./helloworld```
+```shell
+g++ helloworld.cc
+./a.out
+g++ helloworld.cc -o helloworld
+./helloworld
+```
