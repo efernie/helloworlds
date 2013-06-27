@@ -6,6 +6,6 @@ function fact( n )
   end
 end
 
-print("enter a number")
+print("Enter a number")
 a = io.read("*number")
 print(fact(a))
