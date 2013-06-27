@@ -4,6 +4,12 @@
 - Javascript
 - Lua
 - Lisp
+- c++
+- c
+- python
+- ruby
+- html
+- php
+- perl
 - Java
 - node.js
-

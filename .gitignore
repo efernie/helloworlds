@@ -1,3 +1,2 @@
 .DS_Store
-c/*.out
-c++/*.out
+node_modules/
