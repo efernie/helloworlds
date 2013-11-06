@@ -7,7 +7,9 @@
 
 int main (int argc, char * argv[]) {
   @autoreleasepool {
-    NSLog(@"hello world");
+    // Array
+    NSArray *foods = @[@"pizza", @"tacos"];
+    NSLog(@"Hello World!");
     return 0;
   }
 }
