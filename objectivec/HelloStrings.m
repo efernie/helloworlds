@@ -6,7 +6,7 @@
   self = [super init];
 
   if ( self ) {
-    [self logString:nil logMessage:@"Initialize HelloStrings"];
+    [self logString:nil logMessage:@"__________________Initialize HelloStrings__________________"];
     [self startExample];
   }
 

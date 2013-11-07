@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
 
-@interface HelloStrings : NSObject
+@interface LogManagerSingleton : NSObject
 
-// @property (copy) NSString *someString;
++ (LogManagerSingleton *)sharedSingleton;
 
-- (void)startExample;
 - (void)logString:(NSString *)messageDescription logMessage:(NSString *)logString;
 
-@end;
+@end

@@ -8,24 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-#import "hellostrings.h"
+#import "LogManagerSingleton.h"
+#import "HelloStrings.h"
+#import "HelloNumbers.h"
 
 int main (int argc, const char * argv[]) {
   @autoreleasepool {
+
     // log output similar to console.log() in js
     // but you need a format specifier if you want to include objects other
     // than strings and arguments
     NSLog(@"Hello World!");
-    // c's version of log
-    // printf("%s\n", "asdd");
 
     // Strings
     // class from another file
     // init hello strings obj
     HelloStrings *helloStrings = [[HelloStrings alloc] init];
 
-
     // Numbers
+    HelloNumbers *helloNumbers = [[HelloNumbers alloc] init];
     NSNumber *zedNumber = @10;
     NSLog(@"Number-> %@", zedNumber);
 

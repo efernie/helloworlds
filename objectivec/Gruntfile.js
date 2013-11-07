@@ -14,10 +14,26 @@ module.exports = function ( grunt ) {
         options: {
           callback: log
         },
-        command: 'clang -fobjc-arc ' +
-          '-framework Foundation helloworld.m hellostrings.m ' +
-          '-o build/helloworld && ./build/helloworld'
-      }
+        // command: 'clang -fobjc-arc ' +
+          // '-framework Foundation helloworld.m hellostrings.m ' +
+          // '-o build/helloworld && ./build/helloworld'
+        command: function () {
+          var concatFileNames = '';
+          grunt.file.recurse(__dirname, function ( abspath, rootdir, subdir, filename ) {
+            if ( !subdir && filename && filename.indexOf('.m') !== -1 && filename.indexOf('.md') === -1 ) {
+              concatFileNames += ' ' + filename;
+            }
+          });
+
+          return 'clang -fobjc-arc ' +
+            '-framework Foundation ' + concatFileNames + ' ' +
+            '-o build/helloworld && ./build/helloworld';
+
+          // return 'clang -fobjc-arc ' +
+          //   '-framework Foundation helloworld.m hellostrings.m ' +
+          //   '-o build/helloworld ';//&& ./build/helloworld';
+        }
+      },
     },
     watch: {
       shell: {
@@ -30,5 +46,5 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['shell']);
-  grunt.registerTask('watches', ['watch']);
+  grunt.registerTask('watches', ['shell','watch']);
 }
