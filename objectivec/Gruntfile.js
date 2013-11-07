@@ -15,13 +15,13 @@ module.exports = function ( grunt ) {
           callback: log
         },
         command: 'clang -fobjc-arc ' +
-          '-framework Foundation helloworld.m ' +
+          '-framework Foundation helloworld.m hellostrings.m ' +
           '-o build/helloworld && ./build/helloworld'
       }
     },
     watch: {
       shell: {
-        files: ['helloworld.m'],
+        files: ['*.m'],
         tasks: ['shell']
       }
     }
