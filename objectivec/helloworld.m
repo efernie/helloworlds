@@ -16,22 +16,14 @@ int main (int argc, const char * argv[]) {
     // but you need a format specifier if you want to include objects other
     // than strings and arguments
     NSLog(@"Hello World!");
+    // c's version of log
+    // printf("%s\n", "asdd");
 
     // Strings
-    NSString *barString = @"Bar";
-    NSLog(@"String-> %@", barString);
+    // class from another file
+    // init hello strings obj
+    HelloStrings *helloStrings = [[HelloStrings alloc] init];
 
-    // empty strings
-    // need the init otherwise an error will occur
-    NSString *emptyString = [[NSString alloc] init];
-    NSLog(@"Empty string-> %@ //see nothing", emptyString);
-    // fill that empty string up
-    emptyString = @"bar";
-    NSLog(@"Filled up empty string-> %@", emptyString);
-
-    // copying strings
-    NSString *copyOfString = [[NSString alloc] initWithString:emptyString];
-    NSLog(@"copy of empty string that was filled-> %@", copyOfString);
 
     // Numbers
     NSNumber *zedNumber = @10;
@@ -72,12 +64,6 @@ int main (int argc, const char * argv[]) {
     }];
 
     NSLog(@"NSMutableDictionary-> %@", mutateFoodStyle);
-
-    // class from another file
-    // init hello strings obj
-    HelloStrings *helloStrings = [[HelloStrings alloc] init];
-    // show all string stuffs
-    [helloStrings logString:@"test args"];
 
     // commandline stuffs can't really use this with grunt
     // NSString *firstArg = [[NSString alloc] init];

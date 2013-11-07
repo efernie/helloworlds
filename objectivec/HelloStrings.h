@@ -5,8 +5,7 @@
 
 // @property (copy) NSString *someString;
 
-// - (id)init;
-
-- (void)logString:(NSString *)logString;
+- (void)startExample;
+- (void)logString:(NSString *)messageDescription logMessage:(NSString *)logString;
 
 @end;
